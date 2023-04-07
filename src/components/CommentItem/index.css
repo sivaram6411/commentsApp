@@ -1,0 +1,141 @@
+.amber {
+  background-color: #f59e0b;
+}
+
+.blue {
+  background-color: #0b69ff;
+}
+
+.orange {
+  background-color: #f97316;
+}
+
+.emerald {
+  background-color: #10b981;
+}
+
+.teal {
+  background-color: #14b8a6;
+}
+
+.red {
+  background-color: #b91c1c;
+}
+
+.light-blue {
+  background-color: #0ea5e9;
+}
+
+/* Write your CSS here */
+.list {
+  list-style-type: none;
+}
+.comment-container {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.initial {
+  height: 35px;
+  width: 35px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.name-comment {
+  display: flex;
+}
+.name-time {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+.name {
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 600;
+}
+.time {
+  color: #94a3b8;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+.comment {
+  color: #64748b;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-left: 45px;
+}
+.like-delete {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.like-image-like-btn-container {
+  display: flex;
+  align-items: center;
+}
+.like-image {
+  width: 25px;
+  height: 25px;
+}
+.normal-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #64748b;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.active-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #0b69ff;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.dlt-image {
+  width: 25px;
+  height: 25px;
+}
+.dlt-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .sub-container {
+    flex-direction: column;
+  }
+  .like-image {
+    width: 20px;
+    height: 20px;
+  }
+  .like-button {
+    font-size: 15px;
+  }
+  .dlt-image {
+    width: 23px;
+  }
+}
