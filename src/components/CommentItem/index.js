@@ -5,7 +5,7 @@ import './index.css'
 const CommentItem = props => {
   const {commentDetails, toggleLikeButton, DeleteComment} = props
   const {id, name, comment, isLike, date, initialClassName} = commentDetails
-  const initialName = name ? name[0].toUppercase() : ''
+  const initialName = name.length > 0 ? name[0].toUpperCase() : ''
   const updateTime = formatDistanceToNow(date)
   const LikeButton = isLike ? 'active-button' : 'normal-button'
   const LikeImage = isLike
@@ -55,8 +55,8 @@ const CommentItem = props => {
             />
           </button>
         </div>
-        <hr className="hr-line" />
       </div>
+      <hr className="hr-line" />
     </li>
   )
 }

@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {v4} from 'uuid'
+import {v4 as uuidv4} from 'uuid'
 
 import CommentItem from '../CommentItem'
 
@@ -65,26 +65,33 @@ class Comments extends Component {
     }`
 
     const newComment = {
-      id: v4(),
+      id: uuidv4(),
       name: InputName,
       comment: InputComment,
       date: new Date(),
       isLike: false,
       initialClassName: initialBackgroundColor,
     }
-
-    this.setState(prevState => ({
-      CommentsList: [...prevState.CommentsList, newComment],
-      InputName: '',
-      InputComment: '',
-    }))
+    if (InputName.length > 0 && InputComment.length > 0) {
+      this.setState(prevState => ({
+        CommentsList: [...prevState.CommentsList, newComment],
+        InputName: '',
+        InputComment: '',
+      }))
+    } else if (InputName === '') {
+      // eslint-disable-next-line
+      alert('Please Enter Name')
+    } else if (InputComment === '') {
+      // eslint-disable-next-line
+      alert('Please Enter Comment')
+    }
   }
 
   onChangeInputName = event => {
     this.setState({InputName: event.target.value})
   }
 
-  onChangeComment = event => {
+  onChangeInputComment = event => {
     this.setState({InputComment: event.target.value})
   }
 
@@ -102,11 +109,10 @@ class Comments extends Component {
               className="comment-image"
             />
             <form className="form-container" onSubmit={this.onSubmitButton}>
-              <label className="content" htmlFor="name">
+              <p className="content" htmlFor="name">
                 Say something about 4.0 Technologies
-              </label>
+              </p>
               <input
-                type="text"
                 className="input"
                 id="name"
                 placeholder="Your Name"
@@ -118,7 +124,7 @@ class Comments extends Component {
                 cols="50"
                 rows="5"
                 placeholder="Your Comment"
-                onChange={this.onChangeComment}
+                onChange={this.onChangeInputComment}
                 value={InputComment}
               />
               <button type="submit" className="add-button">

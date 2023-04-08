@@ -29,6 +29,7 @@
 /* Write your CSS here */
 .list {
   list-style-type: none;
+  max-width: 1140px;
 }
 .comment-container {
   padding-bottom: 10px;
@@ -63,6 +64,7 @@
   font-family: 'Roboto';
   font-size: 20px;
   font-weight: 600;
+  max-width: 80%;
 }
 .time {
   color: #94a3b8;
